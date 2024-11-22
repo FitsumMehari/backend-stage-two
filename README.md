@@ -34,3 +34,6 @@ A small api that has the following routes:
 5. **Start the server:**
     ```bash
     node index.js
+
+
+Deployed at https://backend-stage-two-8zwp.onrender.com/
