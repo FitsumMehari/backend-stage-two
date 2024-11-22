@@ -8,6 +8,7 @@ dotenv.config();
 
 const app = express();
 app.use(cors());
+app.use(express.json());
 
 const PORT = process.env.PORT || 3000;
 
@@ -19,19 +20,17 @@ mongoose
     .catch((err) => {
         console.log(err);
     });
-app.use("/", (req, res) => {
-    res.redirect("/books");
-})
+// app.use("/", (req, res) => {
+//     res.redirect("books");
+// })
 
 app.use("/books", booksRoute);
 
 app.use((err, req, res, next) => {
     console.error(err.stack);
-    res.status(500).send("Server error!")
-
-})
+    res.status(500).send("Server error!");
+});
 
 app.listen(PORT, () => {
     console.log("Server running on: ", PORT);
-
-})
+});
