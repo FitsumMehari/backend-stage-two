@@ -23,4 +23,15 @@ app.use("/", (req, res) => {
     res.redirect("/books");
 })
 
-app.use("/books", booksRoute)
+app.use("/books", booksRoute);
+
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send("Server error!")
+
+})
+
+app.listen(PORT, () => {
+    console.log("Server running on: ", PORT);
+
+})
