@@ -14,6 +14,9 @@ A small api that has the following routes:
 - ```bash
     DELETE /books/:id
 
+- ```bash
+    GET /books/recommendations
+
 **Getting Started**
 1. **Clone the repository:**
    ```bash
@@ -27,7 +30,7 @@ A small api that has the following routes:
     ```bash
     npm install
 
-4. **Start the server:**
+4. **Add database config:**
     ```bash
     add your mongoDB url in .env file and put it as DB_URL = 'your mongodb url'
 
