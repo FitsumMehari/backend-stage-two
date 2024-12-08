@@ -9,6 +9,9 @@ A small api that has the following routes:
     POST /auth/login
 
 - ```bash
+    GET /books/all
+
+- ```bash
     GET /books
 
 - ```bash
