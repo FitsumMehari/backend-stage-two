@@ -3,6 +3,7 @@ const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
 const booksRoute = require("./routes/books");
+const authRoute = require("./routes/users");
 
 dotenv.config();
 
@@ -25,6 +26,7 @@ mongoose
 // })
 
 app.use("/books", booksRoute);
+app.use("/auth", authRoute);
 
 app.use((err, req, res, next) => {
     console.log(err.stack);
