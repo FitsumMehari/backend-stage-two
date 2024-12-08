@@ -16,6 +16,5 @@
     "crypto-js": "^4.2.0",
     "jsonwebtoken": "^9.0.2",
     "md5": "^2.3.0",
-    "mongoose": "^8.4.1"
   }
 }
