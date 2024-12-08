@@ -1,7 +1,10 @@
 const router = require("express").Router();
 const Book = require("../models/Book");
 
-router.get("/", async(req, res, next) => {
+const { verifyTokenAndAuthorization, verifyToken } = require("./verifyToken");
+
+
+router.get("/all", verifyTokenAndAuthorization, async(req, res, next) => {
     try {
         const books = await Book.find({});
         res.status(200).json(books);
@@ -9,7 +12,17 @@ router.get("/", async(req, res, next) => {
         next(error);
     }
 });
-router.post("/", async(req, res, next) => {
+
+router.get("/", verifyToken, async(req, res, next) => {
+    try {
+        const books = await Book.find({});
+        res.status(200).json(books);
+    } catch (error) {
+        next(error);
+    }
+});
+
+router.post("/", verifyToken, async(req, res, next) => {
     if (!req.body.title ||
         !req.body.author ||
         !req.body.isbn ||
@@ -33,7 +46,7 @@ router.post("/", async(req, res, next) => {
         }
     }
 });
-router.put("/:id", async(req, res, next) => {
+router.put("/:id", verifyToken, async(req, res, next) => {
     if (!req.body.title ||
         !req.body.author ||
         !req.body.isbn ||
@@ -55,7 +68,7 @@ router.put("/:id", async(req, res, next) => {
         }
     }
 });
-router.delete("/:id", async(req, res, next) => {
+router.delete("/:id", verifyToken, async(req, res, next) => {
     const id = req.params.id
     try {
         const book = await Book.findById(id);
@@ -70,7 +83,7 @@ router.delete("/:id", async(req, res, next) => {
         next(error);
     }
 });
-router.get("/recommendations", async(req, res, next) => {
+router.get("/recommendations", verifyToken, async(req, res, next) => {
     try {
         const books = await Book.find({});
         const booksLength = books.length;
