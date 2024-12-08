@@ -3,6 +3,12 @@
 **Description:**
 A small api that has the following routes: 
 - ```bash
+    POST /auth/signup
+
+- ```bash
+    POST /auth/login
+
+- ```bash
     GET /books
 
 - ```bash
