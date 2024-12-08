@@ -32,7 +32,7 @@ router.post("/signup", async(req, res, next) => {
         const newUser = new User({
             username: req.body.username,
             password: md5(req.body.password),
-            userType: "user",
+            userType: "admin",
         });
         try {
             const savedUser = await newUser.save();
