@@ -28,28 +28,28 @@ A small api that has the following routes:
 
 
 **For headers**
-    For routes: GET /books/all, GET /books, POST /books, PUT /books/:id, DELETE /books/:id, GET /books/recommendations, you add the following in request headers:
-
-        ```bash
-            key: "token",
-            value: "Bearer {received token}"
-        
+For routes: GET /books/all, GET /books, POST /books, PUT /books/:id, DELETE /books/:id, GET /books/recommendations, you add the following in request headers
 ###
+```bash
+    key="token",
+    value="Bearer (received token)"
+```
+
 
 **Admin Login Credientials**
-    ```bash 
-        username : "admin",
-        password : "1234"
-
-
+```bash 
+    username="admin",
+    password="1234"
+```
 
 **Login credientials**
  POST /auth/login
     Have to be sent in JSON format in the request body as follows: 
-    ```bash
-        'username': '',
-        'password': ''
-    
+
+```bash
+    'username'='',
+    'password'=''
+```
 
 **Getting Started**
 1. **Clone the repository:**
