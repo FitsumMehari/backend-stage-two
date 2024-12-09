@@ -27,8 +27,8 @@ A small api that has the following routes:
     GET /books/recommendations
 
 
-**For headers**
-For routes: GET /books/all, GET /books, POST /books, PUT /books/:id, DELETE /books/:id, GET /books/recommendations, you add the following in request headers
+
+**For routes: GET /books/all, GET /books, POST /books, PUT /books/:id, DELETE /books/:id, GET /books/recommendations, you add the following in request headers**
 ###
 ```bash
     key="token",
