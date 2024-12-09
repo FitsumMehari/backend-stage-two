@@ -1,4 +1,4 @@
-# backend-stage-two
+# backend-stage-three
 
 **Description:**
 A small api that has the following routes: 
@@ -27,13 +27,14 @@ A small api that has the following routes:
     GET /books/recommendations
 
 
-# In request headers you add 
-```bash
-    key="token",
-    value="Bearer {received token}"
- for routes: GET /books/all, GET /books, POST /books, PUT /books/:id, DELETE /books/:id, GET /books/recommendations
+**In request headers you add**
+    ```bash
+        key="token",
+        value="Bearer {received token}"
+    for routes: GET /books/all, GET /books, POST /books, PUT /books/:id, DELETE /books/:id, GET /books/recommendations
 
-# Admin Login Credientials:
+
+**Admin Login Credientials**
     ```bash 
         username = "admin",
         password = "1234"
