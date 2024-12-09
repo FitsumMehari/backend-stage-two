@@ -31,15 +31,15 @@ A small api that has the following routes:
 **For routes: GET /books/all, GET /books, POST /books, PUT /books/:id, DELETE /books/:id, GET /books/recommendations, you add the following in request headers**
 ###
 ```bash
-    key="token",
-    value="Bearer (received token)"
+    key:"token",
+    value:"Bearer (received token)"
 ```
 
 
 **Admin Login Credientials**
 ```bash 
-    username="admin",
-    password="1234"
+    username:"admin",
+    password:"1234"
 ```
 
 **Login credientials**
@@ -47,8 +47,8 @@ A small api that has the following routes:
     Have to be sent in JSON format in the request body as follows: 
 
 ```bash
-    'username'='',
-    'password'=''
+    'username':'',
+    'password':''
 ```
 
 **Getting Started**
