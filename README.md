@@ -27,7 +27,11 @@ A small api that has the following routes:
     GET /books/recommendations
 
 
-# In request headers you add key="token", value="Bearer {received token}" for routes: GET /books/all, GET /books, POST /books, PUT /books/:id, DELETE /books/:id, GET /books/recommendations
+# In request headers you add 
+```bash
+    key="token",
+    value="Bearer {received token}"
+ for routes: GET /books/all, GET /books, POST /books, PUT /books/:id, DELETE /books/:id, GET /books/recommendations
 
 # Admin Login Credientials:
     ```bash 
@@ -39,10 +43,10 @@ A small api that has the following routes:
 **Login credientials**
  POST /auth/login
     Have to be sent in JSON format in the request body as follows: 
-    {
+    ```bash
         'username': '',
         'password': ''
-    }
+    
 
 **Getting Started**
 1. **Clone the repository:**
