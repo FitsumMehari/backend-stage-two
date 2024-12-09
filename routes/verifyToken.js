@@ -33,7 +33,7 @@ const verifyToken = (req, res, next) => {
 
 const verifyTokenAndAuthorization = (req, res, next) => {
     verifyToken(req, res, () => {
-        if (req.user.userType === "admin" ) {
+        if (req.user.userType === "admin") {
             next();
         } else {
             res.status(401).json({
@@ -41,7 +41,7 @@ const verifyTokenAndAuthorization = (req, res, next) => {
                     "errors": [{
                         "domain": "global",
                         "reason": "required",
-                        "message": "Login Required",
+                        "message": "Authorization Required",
                         "locationType": "header",
                         "location": "Authorization"
                     }],
