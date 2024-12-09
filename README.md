@@ -27,17 +27,19 @@ A small api that has the following routes:
     GET /books/recommendations
 
 
-**In request headers you add**
-    ```bash
-        key="token",
-        value="Bearer {received token}"
-    for routes: GET /books/all, GET /books, POST /books, PUT /books/:id, DELETE /books/:id, GET /books/recommendations
+**For headers**
+    For routes: GET /books/all, GET /books, POST /books, PUT /books/:id, DELETE /books/:id, GET /books/recommendations, you add the following in request headers:
 
+        ```bash
+            key: "token",
+            value: "Bearer {received token}"
+        
+###
 
 **Admin Login Credientials**
     ```bash 
-        username = "admin",
-        password = "1234"
+        username : "admin",
+        password : "1234"
 
 
 
