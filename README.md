@@ -65,7 +65,11 @@ A small api that has the following routes:
     ```bash
     add your mongoDB url in .env file and put it as DB_URL = 'your mongodb url'
 
-5. **Start the server:**
+5. **Add JWT config:**
+    ```bash
+    add your JWT key in .env file and put it as JWTKEY = 'your private JWT key'
+
+6. **Start the server:**
     ```bash
     node index.js
 
