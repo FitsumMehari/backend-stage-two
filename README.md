@@ -51,6 +51,15 @@ A small api that has the following routes:
     'password':''
 ```
 
+**Signup credientials**
+ POST /auth/signup
+    Have to be sent in JSON format in the request body as follows: 
+
+```bash
+    'username':'',
+    'password':''
+```
+
 **Getting Started**
 1. **Clone the repository:**
    ```bash
